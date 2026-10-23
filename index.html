@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holocron · The Galactic Handbook</title>
+  <meta name="description" content="A fan-made, in-universe handbook to the Star Wars galaxy — eras, worlds, species, the Force, factions, starships, the clone army and the real physics behind it all.">
+  <meta name="theme-color" content="#04050a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Holocron · The Galactic Handbook">
+  <meta property="og:description" content="A fan-made, in-universe handbook to the Star Wars galaxy — eras, worlds, characters, species, the Force, starships and the real physics behind it all.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='17' fill='none' stroke='%237fe3ff' stroke-width='2' stroke-dasharray='3 3'/%3E%3Cpath d='M20 9l8 11-8 11-8-11z' fill='%237fe3ff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="nebula" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#/" aria-label="Holocron home">
+      <span class="brand-mark"></span>
+      <span class="brand-text">HOLOCRON<small>GALACTIC HANDBOOK</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main"></nav>
+    <button class="search-btn" aria-label="Search the archive"><span class="label">Search</span><kbd>Ctrl K</kbd></button>
+    <button class="menu-btn" aria-label="Menu"><span></span></button>
+  </header>
+  <div class="progress" aria-hidden="true"></div>
+
+  <div id="app">
+    <main id="view"></main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>Holocron is a non-commercial fan handbook. Star Wars and all related names are the property of Lucasfilm Ltd. Canon material is followed throughout; Legends material is marked.</p>
+        <div class="links">
+          <button data-replay>Replay intro</button>
+          <a href="#/lore">About the archive</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="to-top" aria-label="Back to top"></button>
+
+  <!-- Search palette -->
+  <div class="palette-bg"></div>
+  <div class="palette" role="dialog" aria-label="Search">
+    <label class="field"><input type="text" placeholder="Search planets, ships, eras, Jedi…" autocomplete="off" spellcheck="false"></label>
+    <div class="results"></div>
+    <div class="palette-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span></div>
+  </div>
+
+  <!-- Side drawer -->
+  <div class="drawer-bg"></div>
+  <aside class="drawer" aria-label="Details"><button class="close" aria-label="Close"></button><div class="content"></div></aside>
+
+  <!-- Data -->
+  <script src="js/data/lore.js"></script>
+  <script src="js/data/galaxy.js"></script>
+  <script src="js/data/species.js"></script>
+  <script src="js/data/force.js"></script>
+  <script src="js/data/factions.js"></script>
+  <script src="js/data/arsenal.js"></script>
+  <script src="js/data/clones.js"></script>
+  <script src="js/data/science.js"></script>
+  <script src="js/data/characters.js"></script>
+  <script src="js/data/species-detail.js"></script>
+  <!-- Engine & views -->
+  <script src="js/core.js"></script>
+  <script src="js/views/home.js"></script>
+  <script src="js/views/timeline.js"></script>
+  <script src="js/views/galaxy.js"></script>
+  <script src="js/views/characters.js"></script>
+  <script src="js/views/species.js"></script>
+  <script src="js/views/force.js"></script>
+  <script src="js/views/factions.js"></script>
+  <script src="js/views/arsenal.js"></script>
+  <script src="js/views/clones.js"></script>
+  <script src="js/views/science.js"></script>
+  <script src="js/views/lore.js"></script>
+</body>
+</html>
